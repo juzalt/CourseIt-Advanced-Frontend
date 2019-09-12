@@ -1,0 +1,18 @@
+body {
+  background-color: #FFE600;
+}
+
+#pageContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#HomeLogo {
+  max-height: 223px;
+  max-width: 249px;
+  min-height: 223px;
+  min-width: 249px;
+}

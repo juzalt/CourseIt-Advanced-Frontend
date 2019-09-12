@@ -1,0 +1,14 @@
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #ebebeb;
+  width: 100%;
+  height: 100%;
+}
+ 
+.productCategoryAbout {
+  text-align: center;
+  align-items: center;
+  font-size: large;
+  color: #606060;
+}

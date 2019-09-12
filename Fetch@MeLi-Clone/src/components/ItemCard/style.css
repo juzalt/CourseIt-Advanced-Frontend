@@ -1,0 +1,9 @@
+.productContainer {
+  margin-left: 5px;
+}
+
+.priceContainer {
+  background-color: white;
+  margin: 0;
+  padding: 16px 0;
+}

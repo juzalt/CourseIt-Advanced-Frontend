@@ -1,0 +1,26 @@
+.headerContainer {
+  margin-top: 0;
+  padding: 1% 5%;
+  justify-content: center;
+  display: flex;
+  background-color: yellow;
+}
+
+.headerLogo {
+  float: left;
+}
+.searchBar {
+  width: 100%;
+}
+
+.searchInput {
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+}
+
+#promoText {
+  color: #505050;
+  float: right;
+  text-align: center;
+}
