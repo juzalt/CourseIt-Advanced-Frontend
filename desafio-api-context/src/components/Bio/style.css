@@ -1,0 +1,16 @@
+#bioContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 35px;
+}
+
+#ownerAvatar {
+  border-radius: 100%;
+  max-width: 14%;
+  max-height: 14%;
+  min-height: 181.859px;
+  min-width: 181.859px;
+}
