@@ -1,51 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.css';
 import ItemCard from '../ItemCard';
 
-class Carousel extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      products: [],
-      loading: true
+function Carousel(props) {
+  const [products, setProducts] = useState([]);
+  const [userSearched, setUserSearched] = useState(false);
+  
+  useEffect(() => {
+    async function fetchData(){
+      let data = await fetch(`https://api.mercadolibre.com/sites/${props.siteID}/search?q=${props.input.input}&limit=5`)
+      let jsonData = await data.json();
+      
+      setProducts(jsonData.results);
     }
-  }
+    fetchData();
+  }, [props.input]);
 
-  async componentDidMount(){
-    const data = await fetch(`https://api.mercadolibre.com/sites/${this.props.siteID}/search?q=tv&limit=5`)
-    const jsonData = await data.json();
-
-    this.setState({
-      products: jsonData.results,
-      loading: false
-    });
-
-  }
-
-
-  render(){
-    if (this.state.loading === true) {
-      return ( 
-        <div>LOADING</div>
-      );
-    } else {
-      return(
-        <div className="carouselContainer">
-          {this.state.products.map((product, key) => {
-            return(
-              <ItemCard 
-                key={key} 
-                thumbnail={product.thumbnail}
-                currency_id={product.currency_id} 
-                price={product.price}
-              />
-            );
-          })}
-        </div>
-      );
-    }
-  }
+  return(
+    <div className="carouselContainer">
+      {products.map((product, key) => {
+        return(
+          <ItemCard 
+            key={key} 
+            thumbnail={product.thumbnail}
+            currency_id={product.currency_id} 
+            price={product.price}
+          />
+        );
+      })}
+    </div>
+  );
 }
 
 export default Carousel;
