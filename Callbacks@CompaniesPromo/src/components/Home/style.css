@@ -1,0 +1,14 @@
+#pageContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#startupContainer {
+  max-width: 1000px;
+  min-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 20px auto;
+}

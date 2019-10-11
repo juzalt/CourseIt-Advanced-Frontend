@@ -1,0 +1,17 @@
+#headerContainer {
+  margin-top: 0;
+  background-color: #24292e;
+  height: 54px;
+}
+
+#logo {
+  height: 100%;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;
+  color: #FFF;
+  font-size: 20px;
+  line-height: 54px;
+}
